@@ -1,0 +1,40 @@
+[project]
+name = "campus-hunter-android"
+version = "2.0.5"
+description = "第二课堂自动抢课助手 Android 版"
+requires-python = ">=3.12,<3.14"
+dependencies = [
+    "flet==0.28.3",
+    "requests==2.32.5",
+]
+
+[tool.flet]
+product = "第二课堂助手"
+org = "cn.campushunter"
+project = "campus_hunter"
+build_number = 9
+
+[tool.flet.app]
+path = "src"
+exclude = ["__pycache__"]
+
+[tool.flet.template]
+url = "./template_source"
+ref = "0.28.3"
+
+[tool.flet.android]
+min_sdk_version = 26
+target_sdk_version = 35
+adaptive_icon_background = "#FDFDFD"
+
+[tool.flet.android.permission]
+"android.permission.INTERNET" = true
+"android.permission.FOREGROUND_SERVICE" = true
+"android.permission.FOREGROUND_SERVICE_SPECIAL_USE" = true
+"android.permission.POST_NOTIFICATIONS" = true
+"android.permission.RECEIVE_BOOT_COMPLETED" = true
+"android.permission.WAKE_LOCK" = true
+
+[tool.flet.splash]
+color = "#000000"
+dark_color = "#000000"

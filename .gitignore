@@ -1,9 +1,20 @@
-# Python environment files
+# Python
 __pycache__/
 *.py[cod]
 *$py.class
+.venv/
 
-# PyInstaller build files
+# Build output
 build/
 dist/
-*.spec
+*.apk
+*.aab
+*.log
+
+# Local credentials and app data
+token.txt
+app_state.json
+app_state.json.tmp
+mobile_results.jsonl
+*.jks
+*.keystore
